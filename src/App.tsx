@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Landing from './pages/Landing';
 import Journey from './pages/Journey';
@@ -9,7 +9,6 @@ import './index.css';
 
 // A simple layout component to conditionally render Navbar
 const Layout = ({ children }: { children: React.ReactNode }) => {
-  const location = useLocation();
   // We can hide navbar on specific pages if needed, but for now we show it everywhere
   return (
     <div className="app-container">

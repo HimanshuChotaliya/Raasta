@@ -1,4 +1,3 @@
-import React from 'react';
 import { User, Settings, Shield, Award, Clock } from 'lucide-react';
 
 const Profile = () => {

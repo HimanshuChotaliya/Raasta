@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Navigation, Clock, MapPin, Search } from 'lucide-react';
 
@@ -21,7 +21,7 @@ const Landing = () => {
     { id: 3, start: 'GCC Club', end: 'Thakur Mall', mode: 'cycle', time: 'Sun, 7:00 AM' },
   ];
 
-  const getModeIcon = (modeStr: string) => {
+  const getModeIcon = () => {
     // For demo purposes, we can just use Navigation for all or switch cases.
     return <Navigation size={16} />;
   };
@@ -119,7 +119,7 @@ const Landing = () => {
                   <span style={{ fontWeight: 600 }}>{commute.end}</span>
                 </div>
                 <div style={{ fontSize: 'var(--text-sm)', color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: 'var(--space-2)' }}>
-                  {getModeIcon(commute.mode)}
+                  {getModeIcon()}
                   <span style={{ textTransform: 'capitalize' }}>{commute.mode}</span>
                   <span>•</span>
                   <span>{commute.time}</span>
